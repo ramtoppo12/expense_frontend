@@ -6,14 +6,10 @@ import Balance from "./Balance";
 import History from './History';
 import AddnewTransection from './AddnewTransection';
 import {GlobalProvider} from './GlobalState';
-import axios from "axios"
 
 export default function App() {
 
-    useEffect( async () => {
-        const res = await axios.get('/api/v1/transections');
-    console.log("this is data",res)
-    }, [])
+
 
     return (
         <GlobalProvider>
