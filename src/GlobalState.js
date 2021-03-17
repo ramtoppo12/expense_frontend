@@ -21,7 +21,7 @@ export const GlobalProvider = ({children}) =>{
     //actions
     async function getTransections(){
         try {
-            const res = await axios.get('/api/v1/transections');
+            const res = await axios.get('https://warm-ravine-91109.herokuapp.com/api/v1/transections');
 
             dispatch({
                 type:'GET_TRANSECTION',
@@ -38,7 +38,7 @@ export const GlobalProvider = ({children}) =>{
     async function deleteTransection(id){
 
           try {
-                 await axios.delete(`/api/v1/transections/${id}`);
+                 await axios.delete(`https://warm-ravine-91109.herokuapp.com/api/v1/transections${id}`);
        dispatch({
             type:"DELETE_TRANSECTION",
             payload:id,
@@ -58,7 +58,7 @@ const config={
 }
 
         try {
-            const res = await axios.post('/api/v1/transections/',transection,config)
+            const res = await axios.post('https://warm-ravine-91109.herokuapp.com/api/v1/transections/',transection,config)
             dispatch({
             type:"ADD_TRANSECTION",
             payload:res.data.data,
