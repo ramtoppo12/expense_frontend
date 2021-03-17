@@ -38,7 +38,7 @@ export const GlobalProvider = ({children}) =>{
     async function deleteTransection(id){
 
           try {
-                 await axios.delete(`https://warm-ravine-91109.herokuapp.com/api/v1/transections/${id}`);
+                 await axios.delete(`https://warm-ravine-91109.herokuapp.com/api/v1/transections/${id}/`);
        dispatch({
             type:"DELETE_TRANSECTION",
             payload:id,
